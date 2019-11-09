@@ -1,0 +1,42 @@
+{
+  "name": "webpack-activity-page",
+  "version": "1.0.0",
+  "description": "使用 webpack4.x 打包一个简单电商HTML5活动页",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --open --config webpack.config.js",
+    "build": "webpack --config webpack.config.js"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "lzread",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.7.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "csv-loader": "^3.0.2",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "postcss-pxtorem": "^4.0.1",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "swiper": "^5.2.0",
+    "terser-webpack-plugin": "^2.2.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2",
+    "xml-loader": "^1.2.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
