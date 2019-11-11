@@ -4,8 +4,8 @@
   "description": "使用 webpack4.x 打包一个简单电商HTML5活动页",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.config.js",
-    "build": "webpack --config webpack.config.js"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [
     "webpack"
