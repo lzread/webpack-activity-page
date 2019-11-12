@@ -3,8 +3,8 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const packageInfo = require('./package.json');
-const version = packageInfo.version;//读取package.json里面的版本号
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 
 module.exports = merge(common, {
@@ -15,24 +15,17 @@ module.exports = merge(common, {
      */
     plugins: [
         /**
-         * @BannerPlugin
-         * 用于每个 chunk 文件头部添加 banner。
-         */
-        new webpack.BannerPlugin(
-            `lzread@${version} for browser | https://github.com/lzread`
-        ),
-        /**
          * @CleanWebpackPlugin
          * 用于在下一次打包时清除之前打包的文件。
          */
         new CleanWebpackPlugin(),
+       
     ],
     optimization: {
-        /**
-         * @minimize
-         * 告知 webpack 使用 TerserPlugin 压缩 bundle。
-         * production 模式下，这里默认是 true。
-         */
-        minimize: true
+        minimizer: [
+            new TerserPlugin(),
+            new OptimizeCssAssetsPlugin()
+        ],
+
     },
 });
